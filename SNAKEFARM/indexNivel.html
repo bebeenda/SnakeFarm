@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeFarm</title>
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="stylesheet" href="css/styleNivel.css">
+   
+</head>
+<body>
+    <audio id="music"></audio>
+      <button id="btnMusic">🔊</button>
+<div class="gb-container">
+
+    <div class="gb-screen">
+        <h1>Escolha um nível</h1>
+
+    <div class="formImagem">
+        <!-- agrupa o formulário -->
+        <div class="form-area">
+
+            <div>
+                <ul class="gb-menu">
+                     <li class="gb-item btnVerde" id="btnFacil">Facil</li>
+                      <li class="gb-item btnAmarelo" id="btnMedio">Medio</li>
+                      <li class="gb-item btnVermelho" id="btnDificil">Dificil</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- imagem -->
+        <div class="headSnake">
+            
+            <img id="headSnake">
+        </div>
+        
+        </div>
+
+         <div class="cadastrar">
+            <p>Voltar para <span id="btnTexto">Pagina Inicial</span></p>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <!-- para transição de tela -->
+    <div id="transition-screen"></div> 
+    
+    <script src="js/snakeUtil.js" type="module"></script>
+    <script src="js/scriptNivel.js" type="module"></script>
+</body>
+</html>

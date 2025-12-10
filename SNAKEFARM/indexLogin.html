@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeFarm</title>
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="stylesheet" href="css/alerts.css">
+</head>
+
+<body>
+    <audio id="music"></audio>
+    <button id="btnMusic">🔊</button>
+    <div class="gb-container">
+
+        <div class="gb-screen">
+            <h1>Entrar</h1>
+
+            <div class="formImagem">
+                <!-- agrupa o formulário -->
+                <div class="form-area">
+                    <div class="formularioCadastro">
+                        <form>
+                            <label for="cxUsuario">Usuario</label>
+                            <input type="text" id="cxUsuario" />
+                        </form>
+                    </div>
+
+                    <div class="formularioCadastro">
+                        <form>
+                            <label for="cxSenha">Senha</label>
+                            <input type="password" id="cxSenha" />
+                        </form>
+                    </div>
+
+                    <div>
+                        <ul class="gb-menu">
+                            <li class="gb-item" id="btnJogar">Jogar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- imagem -->
+                <div class="headSnake">
+                    <img id="headSnake">
+                </div>
+
+            </div>
+
+            <div class="cadastrar">
+                <p>Cadastre -se <span id="btnTexto">aqui</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- para transição de tela -->
+    <div id="transition-screen"></div>
+
+    <!-- MODAL DOS ALERTS -->
+    <!-- <div id="modal-overlay" class="modal-overlay hide">
+        <div class="modal-box">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h2 id="modal-title">Título</h2>
+            <p id="modal-message">Mensagem do modal aqui...</p>
+
+            <button id="modal-ok" class="modal-btn">OK</button>
+        </div>
+    </div> -->
+
+
+    <script src="js/alerts.js" type="module"></script>
+    <script src="js/scriptLogin.js" type="module"></script>
+</body>
+
+</html>

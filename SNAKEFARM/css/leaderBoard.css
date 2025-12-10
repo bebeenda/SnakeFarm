@@ -1,0 +1,71 @@
+/* Centraliza o conteúdo da tela */
+.gb-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centraliza horizontalmente */
+    justify-content: flex-start; /* mantém tudo no topo */
+    /* height: 100vh;         ocupa a altura total da tela */
+    padding-top: 20px;     /* espaço do topo */
+    background: black;
+    border: 6px solid var(--gb-mid1);
+    box-shadow: inset 0 0 0 6px var(--gb-mid2);
+}
+
+p{
+    color: #9bbc0f;
+}
+
+/* Centraliza o texto do h1 */
+.gb-screen h1, h2 {
+    text-align: center;
+    margin: 0;
+    color: #ffe100;
+}
+
+/* Centralizar a caixa dos scores */
+#playerScore {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#playerScore p, 
+#playerScore div {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00ff99;
+    animation: typing 2s steps(20) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* TOP 1 - Dourado */
+#playerScore p:nth-child(1),
+#playerScore div:nth-child(1) {
+    color: gold;
+    font-weight: bold;
+    text-shadow: 0 0 10px gold, 0 0 20px #ffd700;
+}
+
+/* TOP 2 - Prata */
+#playerScore p:nth-child(2),
+#playerScore div:nth-child(2) {
+    color: silver;
+    font-weight: bold;
+    text-shadow: 0 0 10px silver;
+}
+
+/* TOP 3 - Bronze */
+#playerScore p:nth-child(3),
+#playerScore div:nth-child(3) {
+    color: #cd7f32; /* bronze */
+    font-weight: bold;
+    text-shadow: 0 0 10px #cd7f32;
+}
+

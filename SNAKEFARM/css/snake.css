@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('../fontes/pixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* PALETA GAME BOY */
+:root {
+    --gb-dark:   #000000;
+    --gb-mid1:   #e5ff00;
+    --gb-mid2:   #8bac0f;
+    --gb-light:  #9bbc0f;
+}
+
+body {
+    background: var(--gb-dark);
+    font-family: 'pixel', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+input {
+    font-family: "pixel", sans-serif;
+}
+
+
+
+/* CONTAINER GERAL */
+.gb-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* distância entre formulário e imagem */
+    margin-top: 40px;
+   
+}
+
+
+/* TELA “GAME BOY” */
+.gb-screen {
+    width: 1000px;
+    height: 600px;
+    background-color: #000000;
+    /* border: 6px solid var(--gb-mid1); */
+    box-shadow: inset 0 0 0 6px var(--gb-mid1);
+    /* display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; */
+    /* align-items: center; */
+    margin-bottom: 25px;
+}
+
+h1{
+    text-align: center;
+    width: 100%; /* Garante centralização */
+    font-size: 45px;
+    color: #ffe100; 
+}
+
+p{
+    text-align: center;
+    font-size: 15px;
+    color: #ffe100; 
+}
+
+
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* para a imagem ficar do lado do formulário */
+.formImagem{ 
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    
+}
+
+
+/* Caixa do formulário */
+.formularioCadastro {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* espaçamento entre elementos */
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+/* Label estilo pixel */
+.formularioCadastro label {
+    /* font-family: "Press Start 2P", monospace; */
+    font-size: 30px;
+    margin: 50px 50px;
+    color: #ffe100;
+}
+
+/* Input com estilo GameBoy */
+.formularioCadastro input[type="text"], .formularioCadastro input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #ffe100;
+    border: 4px solid color(srgb red green blue);
+    outline: none;
+    box-shadow: inset 0 0 0 4px var(--gb-mid1);
+}
+
+
+/* Input quando selecionado */
+.formularioCadastro input[type="text"]:focus , .formularioCadastro input[type="password"]:focus {
+    background: var(--gb-mid1);
+    box-shadow: inset 0 0 0 4px var(--gb-mid2);
+}
+
+/* LOGO */
+.logo {
+    width: 100%;
+    image-rendering: pixelated;
+    /* filter: grayscale(100%) contrast(120%) brightness(80%); */
+}
+
+
+/* MENU */
+.gb-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* botão */
+.gb-item { 
+    
+    color: var(--gb-dark);
+    padding: 20px;
+    width: 100px;
+    margin-top: 18px;
+    margin-left: 145px;
+    background-color: #ffe100;
+    border: 4px solid color(srgb red green blue);
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;         /* NECESSÁRIO para centralizar */
+}
+
+/* botão da musica */
+#btnMusic {
+    position: fixed;
+    top: 40px;
+    left: 40px;          /* agora fica do lado esquerdo */
+  
+    width: 60px;         /* botão maior */
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: #e5ff00;
+    color: #00ff99;
+    font-size: 26px;     /* ícone maior */
+
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ff99;
+
+    font-family: unset !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+#btnTexto:hover{
+    cursor: pointer;
+    color: #e5ff00;
+}
+
+/* ITEM SELECIONADO – INVERTE AS CORES */
+.selected,
+.gb-item:hover {
+    background: var(--gb-mid1);
+    color: #000000;
+    border-color: var(--gb-dark);
+}
+
+
+/* ANIMAÇÕES */
+/* transição de páginas (hora que abrir outras páginas) */
+#transition-screen {
+    position: fixed;
+    inset: 0;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s ease-in;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#transition-screen.active {
+    transform: scaleX(1);
+}
+
+/* --- CONFIG INICIAL --- */
+
+.headSnake {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+
+}
+
+#headSnake {
+    width: 250px;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+/* --- PISCAR --- */
+@keyframes piscarCobra {
+    0% { transform: scaleY(1); }
+    40% { transform: scaleY(0.1); }
+    60% { transform: scaleY(0.1); }
+    100% { transform: scaleY(1); }
+}
+
+/* --- ATAQUE --- */
+/* --- ATAQUE SEM MOVER PARA O LADO (só avançando pra "fora" da tela) --- */
+@keyframes ataqueCobra {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.12); /* recuo leve antes do ataque */
+    }
+    100% {
+        transform: scale(1.35); /* avança como se fosse sair da tela */
+    }
+}
+
+.cobra-atacando {
+    animation: ataqueCobra 0.3s ease-out;
+}
+
+/* --- TELA TREMENDO NO ATAQUE --- */
+@keyframes shakeScreen {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(2px, -3px); }
+    40% { transform: translate(-3px, 2px); }
+    60% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.tela-tremendo {
+    animation: shakeScreen 0.3s ease;
+}

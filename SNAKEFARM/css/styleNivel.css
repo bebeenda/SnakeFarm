@@ -1,0 +1,27 @@
+.gb-item{
+    margin-top: 20px;
+    padding: 20px 50px;
+}
+
+.btnVerde:hover{
+background: linear-gradient(45deg, #4ade80, #22c55e, #16a34a);
+transform: scale(0.92);
+filter: brightness(0.8);
+}
+
+.btnAmarelo:hover{
+transform: scale(0.92);
+filter: brightness(0.8);
+}
+
+.btnVermelho:hover{
+    background-color: rgb(165, 4, 4);
+    transform: scale(0.92);
+    filter: brightness(0.8);
+}
+
+#btnInicial:hover{
+  cursor: pointer;
+  color: #e5ff00;
+}
+

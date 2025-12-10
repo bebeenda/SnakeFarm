@@ -1,0 +1,35 @@
+
+/* Caixa do formulário */
+.formularioCadastro {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* espaçamento entre elementos */
+    /* margin-top: 30px; */
+    margin-left: 50px;
+}
+
+/* Label estilo pixel */
+.formularioCadastro label {
+    /* font-family: "Press Start 2P", monospace; */
+    font-size: 20px;
+    margin: auto;
+    color: #ffe100;
+}
+
+/* Input com estilo GameBoy */
+
+
+/* Input quando selecionado */
+.formularioCadastro input[type="text"]:focus {
+    background: var(--gb-mid1);
+    box-shadow: inset 0 0 0 4px var(--gb-mid2);
+}
+
+.gb-item {
+    margin: 0 auto; 
+    width: 130px;
+    padding: 15px;
+    margin-left: 50px;
+    font-size: 15px;
+}

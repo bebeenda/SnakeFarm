@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeFarm</title>
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="stylesheet" href="css/styleCadastro.css">
+    <link rel="stylesheet" href="css/alerts.css">
+</head>
+
+<body>
+    <audio id="music"></audio>
+    <button id="btnMusic">🔊</button>
+    <div class="gb-container">
+
+        <div class="gb-screen">
+            <h1>Cadastro</h1>
+
+            <div class="formImagem">
+                <!-- agrupa o formulário -->
+                <div class="form-area">
+                    <div class="formularioCadastro">
+                        <form>
+                            <label for="cxUsuario">Usuario</label>
+                            <input type="text" id="cxUsuario" />
+                        </form>
+                    </div>
+
+                    <div class="formularioCadastro">
+                        <form>
+                            <label for="cxSenha">Senha</label>
+                            <input type="password" id="cxSenha" />
+                        </form>
+                    </div>
+
+                    <div class="formularioCadastro">
+                        <form>
+                            <label for="cxSenha">Confirmar Senha</label>
+                            <input type="password" id="cxSenhaConfirma" />
+                        </form>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="gb-menu">
+                            <li class="gb-item" id="btnCadastro">Cadastrar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerImageBtn">
+                    <!-- imagem -->
+                    <div class="headSnake">
+                        <img src="img/headPNG1.png" id="headSnake">
+                    </div>
+
+                    <div class="texto">
+                        <p>Ja tem cadastro? Clique <span id="btnTexto">aqui</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- para transição de tela -->
+    <div id="transition-screen"></div>
+
+    <script src="js/alerts.js" type="module"></script>
+    <script type="module" src="js/snakeUtil.js"></script>
+    <script src="js/scriptCadastro.js" type="module"></script>
+</body>
+
+</html>
