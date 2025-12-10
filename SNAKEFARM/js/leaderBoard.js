@@ -1,4 +1,4 @@
-import { play } from "./audio.js";
+import { play,pause } from "./audio.js";
 import { getObject, getStorage } from "./storage.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -98,5 +98,6 @@ for (let i = 0; i < jogadores.length; i++)
 
 
     play("music/vitoria.mp3");
+
 
 });
