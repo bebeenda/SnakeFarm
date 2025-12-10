@@ -76,51 +76,51 @@ body {
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background-image: url("/img/grama.png");
+    background-image: url("img/grama.png");
 }
 
 .snake-head {
-    background-image: url("/img/head.png"), url("/img/grama.png");
+    background-image: url("img/head.png"), url("img/grama.png");
     background-size: cover;
 }
 
 .snake-body {
-    background-image: url("/img/body.png"), url("/img/grama.png");
+    background-image: url("img/body.png"), url("img/grama.png");
     background-size: cover;
 }
 
 .snake-tail {
-    background-image: url("/img/tail.png"), url("/img/grama.png");
+    background-image: url("img/tail.png"), url("img/grama.png");
     background-size: cover;
 }
 
 .snake-turn{
-    background-image: url("/img/turnbody.png"), url("/img/grama.png");
+    background-image: url("img/turnbody.png"), url("img/grama.png");
     background-size: cover;
 }
 
 .fooduva {
-    background-image: url("/img/uva.png"), url("/img/grama.png") ;
+    background-image: url("img/uva.png"), url("img/grama.png") ;
     background-size: cover;
 }
 
 .foodlaranja {
-    background-image: url("/img/Laranja.png"), url("/img/grama.png") ;
+    background-image: url("img/Laranja.png"), url("img/grama.png") ;
     background-size: cover;
 }
 
 .foodmaca {
-    background-image: url("/img/Maça.png"), url("/img/grama.png") ;
+    background-image: url("img/Maça.png"), url("img/grama.png") ;
     background-size: cover;
 }
 
 .foodpera {
-    background-image: url("/img/Pera.png"), url("/img/grama.png") ;
+    background-image: url("img/Pera.png"), url("img/grama.png") ;
     background-size: cover;
 }
 
 .foodbala {
-    background-image: url("/img/bala.png"), url("/img/grama.png") ;
+    background-image: url("img/bala.png"), url("img/grama.png") ;
     background-size: cover;
 }
 
