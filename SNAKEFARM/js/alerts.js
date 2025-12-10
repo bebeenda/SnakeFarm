@@ -1,7 +1,7 @@
 
 async function loadModal() {
      //baixa o arquivo alerts.html (que contempla somente a div do modal)
-    const modalHTML = await fetch("/alerts.html").then(r => r.text());
+    const modalHTML = await fetch("/SnakeFarm/SNAKEFARM/alerts.html").then(r => r.text());
     //pego a div e insiro na página dinamicamente
     document.body.insertAdjacentHTML("beforeend", modalHTML);
 
@@ -84,4 +84,5 @@ export function closeModal() {
     overlay.classList.remove("show");
     setTimeout(() => overlay.classList.add("hide"), 250);
 }
+
 
