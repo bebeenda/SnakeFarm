@@ -1,1 +1,1 @@
-Jogo da Cobrinha (Snake Game) desenvolvido com HTML, CSS e JavaScript.
+Jogo da Cobrinha (Snake Game) desenvolvido com HTML, CSS e JavaScript..
